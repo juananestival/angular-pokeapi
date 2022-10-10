@@ -1,0 +1,99 @@
+<mat-form-field>
+  <input
+    matInput
+    placeholder="Enter pokemon"
+    #pokemonCtrl
+    (keydown.enter)="search(pokemonCtrl.value)"
+  />
+  <mat-icon matSuffix (click)="search(pokemonCtrl.value)">search</mat-icon>
+</mat-form-field>
+<div class="col">
+  
+  <div class="col1">
+ 
+    <mat-card *ngIf="pokemon">
+      <mat-card-header >
+        <mat-card-title><span class="name">Pokemon Name: </span>{{ pokemon.name }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-subtitle>
+
+      
+    
+      </mat-card-subtitle>
+      <mat-card-content>
+        <img
+        mat-card-image
+        src="{{ pokemon.sprites.other.dream_world.front_default }}"
+        alt="Pokemon Image"
+      />
+      </mat-card-content>
+      <mat-card-footer>
+        Pokemon Id:{{ pokemon.id }}
+      </mat-card-footer>
+    </mat-card>
+  </div>
+  <div class="col2">
+
+    <mat-card *ngIf="pokemon">
+      <mat-card-header >
+        <mat-card-title><span class="name">Pokemon Info </span></mat-card-title>
+      </mat-card-header>
+      <mat-card-subtitle>
+        <span class="details">Pokemon Abilities </span>
+       
+    
+      </mat-card-subtitle>
+      <mat-card-content>
+        <ul>  
+          <li *ngFor="let ability of pokemon.abilities">
+            <b>  {{ability.ability.name}} </b> 
+            <a [(click)="passTheSalt()">{{ability.ability.name}}</a>          
+         </li>
+         </ul>
+   
+      </mat-card-content>
+      <mat-card-subtitle>
+        <span class="details">Moves  </span>
+
+      </mat-card-subtitle>
+      <mat-card-content>
+        <ul>  
+          <li *ngFor="let move of pokemon.moves">
+            <b> {{move.move.name}} </b>           
+         </li>
+         </ul>
+
+      </mat-card-content>
+      <mat-card-footer>
+        Pokemon Id:{{ pokemon.id }}
+      </mat-card-footer>
+    </mat-card>
+  </div>
+  <div class="col3">
+    <mat-card *ngIf="pokemon">
+      <mat-card-header >
+        <mat-card-title><span class="name">Pokemon Info </span></mat-card-title>
+      </mat-card-header>
+      <mat-card-subtitle>
+        <table>
+          <span class="details">Pokemon Type </span>
+
+     </table>
+       
+    
+      </mat-card-subtitle>
+      <mat-card-content>
+        <ul>  
+          <li *ngFor="let type of pokemon.types">
+            <b> {{type.type.name}} </b>           
+         </li>
+         </ul>
+
+      </mat-card-content>
+
+    </mat-card>
+
+  </div>
+</div>
+
+

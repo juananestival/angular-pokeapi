@@ -1,0 +1,56 @@
+
+:host {
+  display: flex;
+  background-color: #e7d2d2de;
+
+  justify-content: center;
+  flex-direction: column;
+  padding: 25px;
+}
+
+mat-form-field {
+  width: 40%;
+}
+    
+mat-icon {
+  cursor: pointer;
+}
+
+.name {
+  color: rgb(253, 253, 253);
+
+}
+.details {
+  color: blueviolet;
+  padding-left: 25px;
+  font-size: large;
+
+}
+mat-card {
+  margin-top: 30px;
+  width: 450px;
+  background-color:cadetblue;
+  background-color: transparentize($color: #782d2dbc, $amount: 0.5);
+  padding: 2px;
+
+}
+
+mat-card-header {
+  padding: 20px;
+
+}
+mat-card-title, b, li {
+  color:rgb(98, 132, 194);
+}
+mat-card-subtitle {
+    margin-top: 30px;
+    padding-top: 25px;
+  }
+  
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+}
+.col{display:flex;}
+.col div{flex:1}
+

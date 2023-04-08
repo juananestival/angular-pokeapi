@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "pokeapp-juananestival"
+  },
+  "targets": {
+    "pokeapp-juananestival": {
+      "hosting": {
+        "poke-app": [
+          "pokeapp-juananestival"
+        ]
+      }
+    }
+  }
+}

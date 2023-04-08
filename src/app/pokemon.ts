@@ -29,7 +29,8 @@ interface ability {
 }
 interface move {
     move: {
-        name: string
+        name: string,
+        url:string
     },
 }
 interface type {
